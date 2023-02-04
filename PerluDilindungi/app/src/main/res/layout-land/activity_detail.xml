@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.DetailActivity">
+
+        <TextView
+            android:id="@+id/nama_faskes_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/oxygen_bold"
+            android:text="Nama Faskes"
+            android:textColor="#000000"
+            android:textSize="32sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/kode_faskes_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/oxygen_bold"
+            android:text="Kode Faskes"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/jenis_faskes_detail"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nama_faskes_detail" />
+
+        <TextView
+            android:id="@+id/jenis_faskes_detail"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:background="@color/puskesmasColor"
+            android:fontFamily="@font/oxygen_bold"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:text="RUMAH SAKIT"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/kode_faskes_detail"
+            app:layout_constraintTop_toBottomOf="@+id/nama_faskes_detail"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/alamat_faskes_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppins"
+            android:inputType="textMultiLine|textNoSuggestions"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:text="Alamat"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/kode_faskes_detail"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/telp_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins"
+            android:text="TextView"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/alamat_faskes_detail" />
+
+        <ImageView
+            android:id="@+id/kesiapan_image_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/telp_detail"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/kesiapan_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/oxygen_bold"
+            android:paddingLeft="36dp"
+            android:paddingRight="36dp"
+            android:text="@string/siapvaksinasi"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/kesiapan_image_view" />
+
+        <Button
+            android:id="@+id/googlemaps_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:capitalize="none"
+            android:fontFamily="@font/poppins"
+            android:text="Google Maps"
+            android:textSize="12sp"
+            app:backgroundTint="@color/klinikColor"
+            app:cornerRadius="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/kesiapan_detail" />
+
+        <Button
+            android:id="@+id/addbookmark_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:capitalize="none"
+            android:fontFamily="@font/poppins"
+            android:text="+Bookmark"
+            android:textSize="12sp"
+            app:backgroundTint="@color/puskesmasColor"
+            app:cornerRadius="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/googlemaps_button" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

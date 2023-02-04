@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/news"
+        android:title="@string/news"
+        android:icon="@drawable/ic_twotone_menu_book_24"/>
+
+    <item
+        android:id="@+id/faskes"
+        android:title="@string/faskes"
+        android:icon="@drawable/ic_outline_location_on_24"/>
+
+    <item
+        android:id="@+id/bookmark"
+        android:title="@string/bookmark"
+        android:icon="@drawable/ic_baseline_bookmark_border_24"/>
+
+</menu>

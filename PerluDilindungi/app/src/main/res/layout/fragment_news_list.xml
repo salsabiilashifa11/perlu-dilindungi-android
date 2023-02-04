@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="news"
+            type="com.if3210_2022_android_28.perludilindungi.model.NewsResponse.News" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/fragment_news_list_card"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="2dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/fragment_news_list_image"
+                    android:layout_width="120dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    app:enclosureUrl="@{news.enclosure._url}" />
+
+                <TextView
+                    android:id="@+id/fragment_news_list_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="17dp"
+                    android:layout_toEndOf="@id/fragment_news_list_image"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/oxygen_bold"
+                    android:maxLines="2"
+                    android:text="@{news.title}"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/fragment_news_list_pubdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="17dp"
+                    android:layout_toEndOf="@id/fragment_news_list_image"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/oxygen"
+                    android:maxLines="1"
+                    android:text="@{news.pubDate}"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </FrameLayout>
+</layout>

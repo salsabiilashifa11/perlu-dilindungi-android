@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/newsFragment">
+
+    <fragment
+        android:id="@+id/newsFragment"
+        android:name="com.if3210_2022_android_28.perludilindungi.news.NewsFragment"
+        android:label="NewsFragment">
+        <action
+            android:id="@+id/action_newsFragment_to_newsWebFragment"
+            app:destination="@id/newsWebFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsWebFragment"
+        android:name="com.if3210_2022_android_28.perludilindungi.news.web.NewsWebFragment"
+        android:label="NewsWebFragment">
+        <argument
+            android:name="selectedNews"
+            app:argType="com.if3210_2022_android_28.perludilindungi.model.NewsResponse$News" />
+    </fragment>
+</navigation>
